@@ -6,14 +6,9 @@
 
 - [x] Sucrase + Nodemon
 - [x] ESLint + Prettier + EditorConfig
-- [ ] Sequelize (PostgresSQL)
+- [x] Sequelize (PostgresSQL)
 
 ### Funcionalidades
-
-#### Autenticação
-
-- [ ] A autenticação deve ser feita usando JWT
-- [ ] Realize a validação dos dados de entrada
 
 #### Cadastro e atualização de usuários
 
@@ -24,13 +19,18 @@
 - [ ] Criptografe a senha do usuário para segurança
 - [ ] Realize a validação dos dados de entrada
 
+#### Autenticação
+
+- [ ] A autenticação deve ser feita usando JWT
+- [ ] Realize a validação dos dados de entrada
+
 ### Passos
 
 - [x] Configurando estrutura
 - [x] Nodemon & Sucrase
 - [x] Configurando Docker
 - [x] ESLint, Prettier & EditorConfig
-- [ ] Configurando Sequelize
+- [x] Configurando Sequelize
 - [ ] Migration do usuário
 - [ ] Model de usuário e Loader de models
 - [ ] Cadastro de usuários
