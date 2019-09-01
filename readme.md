@@ -5,7 +5,7 @@
 ### Iniciando aplicação
 
 - [x] Sucrase + Nodemon
-- [ ] ESLint + Prettier + EditorConfig
+- [x] ESLint + Prettier + EditorConfig
 - [ ] Sequelize (PostgresSQL)
 
 ### Funcionalidades
@@ -17,7 +17,11 @@
 
 #### Cadastro e atualização de usuários
 
-- [ ] Criptograde a senha do usuário para segurança
+- [ ] Permita que novos usuários se cadastrem em sua aplicação usando nome,
+      email e senha.
+- [ ] Para atualizar a senha, o usuário deve também enviar um campo de
+      confirmação com a mesma senha
+- [ ] Criptografe a senha do usuário para segurança
 - [ ] Realize a validação dos dados de entrada
 
 ### Passos
@@ -25,7 +29,7 @@
 - [x] Configurando estrutura
 - [x] Nodemon & Sucrase
 - [x] Configurando Docker
-- [ ] ESLint, Prettier & EditorConfig
+- [x] ESLint, Prettier & EditorConfig
 - [ ] Configurando Sequelize
 - [ ] Migration do usuário
 - [ ] Model de usuário e Loader de models
