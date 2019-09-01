@@ -4,7 +4,7 @@
 
 ### Iniciando aplicação
 
-- [ ] Sucrase + Nodemon
+- [x] Sucrase + Nodemon
 - [ ] ESLint + Prettier + EditorConfig
 - [ ] Sequelize (PostgresSQL)
 
@@ -23,7 +23,7 @@
 ### Passos
 
 - [x] Configurando estrutura
-- [ ] Nodemon & Sucrase
+- [x] Nodemon & Sucrase
 - [ ] Configurando Docker
 - [ ] ESLint, Prettier & EditorConfig
 - [ ] Configurando Sequelize
