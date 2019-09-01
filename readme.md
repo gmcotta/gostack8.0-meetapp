@@ -24,7 +24,7 @@
 
 - [x] Configurando estrutura
 - [x] Nodemon & Sucrase
-- [ ] Configurando Docker
+- [x] Configurando Docker
 - [ ] ESLint, Prettier & EditorConfig
 - [ ] Configurando Sequelize
 - [ ] Migration do usuário
@@ -32,6 +32,6 @@
 - [ ] Cadastro de usuários
 - [ ] Gerando hash da senha
 - [ ] Autenticação JWT
-- [ ] Middelware da autenticação
+- [ ] Middleware da autenticação
 - [ ] Update do usuário
 - [ ] Validando dados de entrada
