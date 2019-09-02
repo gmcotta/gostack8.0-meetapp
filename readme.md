@@ -31,8 +31,9 @@
 - [x] Configurando Docker
 - [x] ESLint, Prettier & EditorConfig
 - [x] Configurando Sequelize
-- [ ] Migration do usuário
-- [ ] Model de usuário e Loader de models
+- [x] Migration do usuário
+- [ ] Model de usuário
+- [ ] Loader de models
 - [ ] Cadastro de usuários
 - [ ] Gerando hash da senha
 - [ ] Autenticação JWT
