@@ -15,7 +15,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 
 #### Cadastro e atualização de usuários
 
-- [ ] Permita que novos usuários se cadastrem em sua aplicação usando nome,
+- [x] Permita que novos usuários se cadastrem em sua aplicação usando nome,
       email e senha.
 - [ ] Para atualizar a senha, o usuário deve também enviar um campo de
       confirmação com a mesma senha
@@ -37,7 +37,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Migration do usuário
 - [x] Model de usuário
 - [x] Loader de models
-- [ ] Cadastro de usuários
+- [x] Cadastro de usuários
 - [ ] Gerando hash da senha
 - [ ] Autenticação JWT
 - [ ] Middleware da autenticação
