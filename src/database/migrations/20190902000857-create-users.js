@@ -1,4 +1,6 @@
 module.exports = {
+  // The migration will create a table with the following columns:
+  // id, name, email, password_hash, created_at, updated_At
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
       id: {
@@ -30,7 +32,7 @@ module.exports = {
       },
     });
   },
-
+  // If the migration fails, this method runs. It will drop the table
   down: queryInterface => {
     return queryInterface.dropTable('users');
   },

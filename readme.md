@@ -1,5 +1,8 @@
 # Projeto Meetapp - GoStack Bootcamp da Rocketseat
 
+A aplicação desse Bootcamp é um app agragador de eventos para desenvolvedores
+chamado Meetapp (um acrônimo à Meetup + App)
+
 ## Desafio 2 do Bootcamp
 
 ### Iniciando aplicação
@@ -33,7 +36,7 @@
 - [x] Configurando Sequelize
 - [x] Migration do usuário
 - [x] Model de usuário
-- [ ] Loader de models
+- [x] Loader de models
 - [ ] Cadastro de usuários
 - [ ] Gerando hash da senha
 - [ ] Autenticação JWT

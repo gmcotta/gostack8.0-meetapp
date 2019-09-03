@@ -1,3 +1,4 @@
+// Configuration of the database
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
