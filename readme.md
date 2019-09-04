@@ -24,7 +24,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 
 #### Autenticação
 
-- [ ] A autenticação deve ser feita usando JWT
+- [x] A autenticação deve ser feita usando JWT
 
 ### Passos
 
@@ -38,7 +38,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Loader de models
 - [x] Cadastro de usuários
 - [x] Gerando hash da senha
-- [ ] Autenticação JWT
+- [x] Autenticação JWT
 - [ ] Middleware da autenticação
 - [ ] Update do usuário
 - [ ] Validando dados de entrada
