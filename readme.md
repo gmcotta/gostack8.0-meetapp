@@ -20,7 +20,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Criptografe a senha do usuário para segurança
 - [x] Para atualizar a senha, o usuário deve também enviar um campo de
       confirmação com a mesma senha
-- [ ] Realize a validação dos dados de entrada
+- [x] Realize a validação dos dados de entrada
 
 #### Autenticação
 
@@ -41,4 +41,4 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Autenticação JWT
 - [x] Middleware da autenticação
 - [x] Update do usuário
-- [ ] Validando dados de entrada
+- [x] Validando dados de entrada
