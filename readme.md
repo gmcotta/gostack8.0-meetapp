@@ -39,6 +39,6 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Cadastro de usuários
 - [x] Gerando hash da senha
 - [x] Autenticação JWT
-- [ ] Middleware da autenticação
+- [x] Middleware da autenticação
 - [ ] Update do usuário
 - [ ] Validando dados de entrada

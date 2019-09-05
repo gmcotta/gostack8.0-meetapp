@@ -1,6 +1,7 @@
 import User from '../models/User';
 
 class UserController {
+  // Create method
   async store(req, res) {
     // Verify if the user email already exists
     const userExists = await User.findOne({ where: { email: req.body.email } });
@@ -17,6 +18,12 @@ class UserController {
       name,
       email,
     });
+  }
+
+  // Update method
+  async update(req, res) {
+    console.log(req.userId);
+    return res.json({ ok: true });
   }
 }
 
