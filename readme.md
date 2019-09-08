@@ -61,7 +61,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [ ] Não deve ser possível cadastrar meetups com datas que já passaram.
 - [ ] O usuário também deve poder editar todos dados de meetups que ainda não
       aconteceram e que ele é organizador.
-- [ ] Crie uma rota para listar os meetups que são organizados pelo usuário
+- [x] Crie uma rota para listar os meetups que são organizados pelo usuário
       logado.
 - [ ] O usuário deve poder cancelar meetups organizados por ele e que ainda não
       aconteceram. O cancelamento deve deletar o meetup da base de dados.
@@ -104,6 +104,7 @@ Nessa listagem retorne também os dados do organizador.
 - [x] Banner do meetup
 - [x] Migration e model de meetup
 - [x] Cadastro do meetup
+- [x] Listando meetups do organizador
 - [ ] Validações de cadastro do meetup
 - [ ] Listando agendamentos do usuário
 - [ ] Aplicando paginação

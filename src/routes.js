@@ -13,6 +13,7 @@ import authMiddleware from './app/middlewares/auth';
 // Instanciate the Router module
 const routes = new Router();
 
+// Instanciate a multer object
 const upload = multer(multerConfig);
 
 // Create an user
@@ -35,6 +36,8 @@ routes.post('/files', upload.single('file'), FileController.store);
 
 // Create a meetup
 routes.post('/meetups', MeetupController.store);
+// List meetups that were created by the logged user
+routes.get('/meetups', MeetupController.index);
 
 // Export the route
 export default routes;
