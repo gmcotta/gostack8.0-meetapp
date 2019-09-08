@@ -43,13 +43,13 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] Update do usuário
 - [x] Validando dados de entrada
 
-## Desafio 2 do Bootcamp
+## Desafio 3 do Bootcamp
 
 ### Funcionalidades
 
 #### Gerenciamento de arquivos
 
-- [ ] Crie uma rota para upload de arquivos que cadastra em uma tabela o caminho
+- [x] Crie uma rota para upload de arquivos que cadastra em uma tabela o caminho
       e nome do arquivo e retorna todos dados do arquivo cadastrado.
 
 #### Gerenciamento de meetups
@@ -100,8 +100,8 @@ Nessa listagem retorne também os dados do organizador.
 
 ### Passos
 
-- [ ] Cofigurando Multer
-- [ ] Avatar do usuário
+- [x] Cofigurando Multer
+- [x] Banner do meetup
 - [ ] Listagem de prestadores de serviço
 - [ ] Migration e model de agendamento
 - [ ] Agendamento de serviço

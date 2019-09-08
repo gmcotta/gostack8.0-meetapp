@@ -5,6 +5,7 @@ import multerConfig from './config/multer';
 
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
+import FileController from './app/controllers/FileController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -26,9 +27,7 @@ routes.put('/users', UserController.update);
 /* Add a middleware to upload a single file, which is contained in the 'file'
  * field of the multipart form
  */
-routes.post('/files', upload.single('file'), (req, res) => {
-  res.json({ ok: 'File added' });
-});
+routes.post('/files', upload.single('file'), FileController.store);
 
 // Export the route
 export default routes;
