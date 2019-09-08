@@ -54,7 +54,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 
 #### Gerenciamento de meetups
 
-- [ ] O usuário pode cadastrar meetups na plataforma com título do meetup,
+- [x] O usuário pode cadastrar meetups na plataforma com título do meetup,
       descrição, localização, data e hora e imagem (banner). Todos campos são
       obrigatórios. Adicione também um campo user_id que armazena o ID do usuário
       que organiza o evento.
@@ -103,8 +103,8 @@ Nessa listagem retorne também os dados do organizador.
 - [x] Cofigurando Multer
 - [x] Banner do meetup
 - [x] Migration e model de meetup
-- [ ] Agendamento de serviço
-- [ ] Validações de agendamento
+- [x] Cadastro do meetup
+- [ ] Validações de cadastro do meetup
 - [ ] Listando agendamentos do usuário
 - [ ] Aplicando paginação
 - [ ] Listando agenda do prestador
