@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import { startOfHour, parseISO, isBefore } from 'date-fns';
 
 import File from '../models/File';
 import Meetup from '../models/Meetup';
@@ -35,6 +36,27 @@ class MeetupController {
     // Validate the data received from the body of the request with the schema
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Validation fails' });
+    }
+
+    // Extract the date field from the body of the request
+    const { date } = req.body;
+
+    const hourStart = startOfHour(parseISO(date));
+    // Check if the informed date is before than today
+    if (isBefore(hourStart, new Date())) {
+      return res.status(400).json({ error: 'Past dates are not accepted' });
+    }
+
+    // Check meetup availability
+    const availability = await Meetup.findOne({
+      where: {
+        user_id: req.userId,
+        date: hourStart,
+      },
+    });
+
+    if (availability) {
+      return res.status(400).json({ error: 'This date is already used' });
     }
 
     // Create a meetup

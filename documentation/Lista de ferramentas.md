@@ -32,3 +32,4 @@
 - multer: permite fazer o upload de arquivos no formato multipart form
 - extname: verifica a extensão do arquivo
 - crypto: gera uma string hexadecimal
+- date-fns: tratamento de datas

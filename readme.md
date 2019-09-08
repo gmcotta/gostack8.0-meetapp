@@ -58,7 +58,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
       descrição, localização, data e hora e imagem (banner). Todos campos são
       obrigatórios. Adicione também um campo user_id que armazena o ID do usuário
       que organiza o evento.
-- [ ] Não deve ser possível cadastrar meetups com datas que já passaram.
+- [x] Não deve ser possível cadastrar meetups com datas que já passaram.
 - [ ] O usuário também deve poder editar todos dados de meetups que ainda não
       aconteceram e que ele é organizador.
 - [x] Crie uma rota para listar os meetups que são organizados pelo usuário
@@ -105,7 +105,7 @@ Nessa listagem retorne também os dados do organizador.
 - [x] Migration e model de meetup
 - [x] Cadastro do meetup
 - [x] Listando meetups do organizador
-- [ ] Validações de cadastro do meetup
+- [x] Validações de cadastro do meetup
 - [ ] Listando agendamentos do usuário
 - [ ] Aplicando paginação
 - [ ] Listando agenda do prestador
