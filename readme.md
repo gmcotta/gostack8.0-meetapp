@@ -102,8 +102,7 @@ Nessa listagem retorne também os dados do organizador.
 
 - [x] Cofigurando Multer
 - [x] Banner do meetup
-- [ ] Listagem de prestadores de serviço
-- [ ] Migration e model de agendamento
+- [x] Migration e model de meetup
 - [ ] Agendamento de serviço
 - [ ] Validações de agendamento
 - [ ] Listando agendamentos do usuário

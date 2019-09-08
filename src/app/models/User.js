@@ -2,6 +2,7 @@ import Sequelize, { Model } from 'sequelize';
 import bcrypt from 'bcryptjs';
 
 class User extends Model {
+  // Initialize the model by inherit the Model method from Sequelize
   static init(sequelize) {
     super.init(
       // First argument is the columns of the model
