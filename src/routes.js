@@ -7,6 +7,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import MeetupController from './app/controllers/MeetupController';
+import OrganizerController from './app/controllers/OrganizerController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -36,8 +37,9 @@ routes.post('/files', upload.single('file'), FileController.store);
 
 // Create a meetup
 routes.post('/meetups', MeetupController.store);
+
 // List meetups that were created by the logged user
-routes.get('/meetups', MeetupController.index);
+routes.get('/organizer', OrganizerController.index);
 
 // Export the route
 export default routes;
