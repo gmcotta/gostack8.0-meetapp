@@ -59,10 +59,10 @@ chamado Meetapp (um acrônimo à Meetup + App)
       obrigatórios. Adicione também um campo user_id que armazena o ID do usuário
       que organiza o evento.
 - [x] Não deve ser possível cadastrar meetups com datas que já passaram.
-- [ ] O usuário também deve poder editar todos dados de meetups que ainda não
-      aconteceram e que ele é organizador.
 - [x] Crie uma rota para listar os meetups que são organizados pelo usuário
       logado.
+- [ ] O usuário também deve poder editar todos dados de meetups que ainda não
+      aconteceram e que ele é organizador.
 - [ ] O usuário deve poder cancelar meetups organizados por ele e que ainda não
       aconteceram. O cancelamento deve deletar o meetup da base de dados.
 
@@ -87,10 +87,11 @@ chamado Meetapp (um acrônimo à Meetup + App)
 http://localhost:3333/meetups?date=2019-07-01&page=2
 ```
 
-Nesse exemplo, listaremos a página 2 dos meetups que acontecerão no dia 01 de
+      Nesse exemplo, listaremos a página 2 dos meetups que acontecerão no dia 01 de
+
 Julho.
 
-Nessa listagem retorne também os dados do organizador.
+- [x] Nessa listagem retorne também os dados do organizador.
 
 #### Listagem de inscrições
 
@@ -106,8 +107,7 @@ Nessa listagem retorne também os dados do organizador.
 - [x] Cadastro do meetup
 - [x] Listando meetups do organizador
 - [x] Validações de cadastro do meetup
-- [ ] Listando agendamentos do usuário
-- [ ] Aplicando paginação
+- [x] Aplicando paginação na listagem de meetups
 - [ ] Listando agenda do prestador
 - [ ] Configurando MongoDB
 - [ ] Notificando novos agendamentos

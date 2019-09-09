@@ -3,20 +3,40 @@ import { startOfHour, parseISO, isBefore } from 'date-fns';
 
 import File from '../models/File';
 import Meetup from '../models/Meetup';
+import User from '../models/User';
 
 class MeetupController {
   // List all meetups created by the logged user
   async index(req, res) {
+    // Define current page and items per page
+    const { page } = req.query;
+    const itemsPerPage = 10;
+
+    // Check if page number exists
+    if (page === '' || page === null || page === undefined) {
+      return res.status(400).json({ error: 'Page does not exist' });
+    }
+
+    /*
+     * Find all meetups, order by date, set offset of 10 items and add the file
+     * and user fields
+     */
+
     const meetups = await Meetup.findAll({
-      where: {
-        user_id: req.userId,
-      },
+      order: ['date'],
+      limit: itemsPerPage,
+      offset: (page - 1) * itemsPerPage,
       attributes: ['id', 'title', 'description', 'location', 'date'],
       include: [
         {
           model: File,
           as: 'banner',
-          attributes: ['id', 'url', 'name', 'path'],
+          attributes: ['id', 'path', 'url'],
+        },
+        {
+          model: User,
+          as: 'user',
+          attributes: ['id', 'name', 'email'],
         },
       ],
     });

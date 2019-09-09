@@ -35,6 +35,9 @@ routes.put('/users', UserController.update);
  */
 routes.post('/files', upload.single('file'), FileController.store);
 
+// List all meetups
+routes.get('/meetups', MeetupController.index);
+
 // Create a meetup
 routes.post('/meetups', MeetupController.store);
 
