@@ -17,19 +17,37 @@ class MeetupController {
   async index(req, res) {
     // Define current page, date and items per page
     const { page, date } = req.query;
-    const parsedDate = parseISO(date);
     const itemsPerPage = 10;
 
-    // Check if page or date values exist
-    if (
-      page === '' ||
-      page === null ||
-      page === undefined ||
-      date === '' ||
-      date === null ||
-      date === undefined
-    ) {
+    // Transform the string date into a date value
+    const parsedDate = parseISO(date);
+
+    // Check if page value exists
+    if (page === '' || page === null || page === undefined) {
       return res.status(400).json({ error: 'Invalid query' });
+    }
+
+    // Check if date value exists
+    if (date === '' || date === null || date === undefined) {
+      const meetups = await Meetup.findAll({
+        order: ['date'],
+        limit: itemsPerPage,
+        offset: (page - 1) * itemsPerPage,
+        attributes: ['id', 'title', 'description', 'location', 'date'],
+        include: [
+          {
+            model: File,
+            as: 'banner',
+            attributes: ['id', 'path', 'url'],
+          },
+          {
+            model: User,
+            as: 'user',
+            attributes: ['id', 'name', 'email'],
+          },
+        ],
+      });
+      return res.json(meetups);
     }
 
     /*
