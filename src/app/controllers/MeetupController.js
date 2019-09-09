@@ -1,20 +1,35 @@
 import * as Yup from 'yup';
-import { startOfHour, parseISO, isBefore } from 'date-fns';
+import { Op } from 'sequelize';
+import {
+  startOfHour,
+  parseISO,
+  isBefore,
+  startOfDay,
+  endOfDay,
+} from 'date-fns';
 
 import File from '../models/File';
 import Meetup from '../models/Meetup';
 import User from '../models/User';
 
 class MeetupController {
-  // List all meetups created by the logged user
+  // List all meetups
   async index(req, res) {
-    // Define current page and items per page
-    const { page } = req.query;
+    // Define current page, date and items per page
+    const { page, date } = req.query;
+    const parsedDate = parseISO(date);
     const itemsPerPage = 10;
 
-    // Check if page number exists
-    if (page === '' || page === null || page === undefined) {
-      return res.status(400).json({ error: 'Page does not exist' });
+    // Check if page or date values exist
+    if (
+      page === '' ||
+      page === null ||
+      page === undefined ||
+      date === '' ||
+      date === null ||
+      date === undefined
+    ) {
+      return res.status(400).json({ error: 'Invalid query' });
     }
 
     /*
@@ -23,6 +38,11 @@ class MeetupController {
      */
 
     const meetups = await Meetup.findAll({
+      where: {
+        date: {
+          [Op.between]: [startOfDay(parsedDate), endOfDay(parsedDate)],
+        },
+      },
       order: ['date'],
       limit: itemsPerPage,
       offset: (page - 1) * itemsPerPage,

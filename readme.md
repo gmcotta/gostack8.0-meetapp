@@ -79,7 +79,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 
 #### Listagem de meetups
 
-- [ ] Crie uma rota para listar os meetups com filtro por data (não por hora),
+- [x] Crie uma rota para listar os meetups com filtro por data (não por hora),
       os resultados dessa listagem devem vir paginados em 10 itens por página.
       Abaixo tem um exemplo de chamada para a rota de listagem dos meetups:
 
@@ -87,7 +87,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 http://localhost:3333/meetups?date=2019-07-01&page=2
 ```
 
-      Nesse exemplo, listaremos a página 2 dos meetups que acontecerão no dia 01 de
+Nesse exemplo, listaremos a página 2 dos meetups que acontecerão no dia 01 de
 
 Julho.
 
@@ -108,7 +108,7 @@ Julho.
 - [x] Listando meetups do organizador
 - [x] Validações de cadastro do meetup
 - [x] Aplicando paginação na listagem de meetups
-- [ ] Listando agenda do prestador
+- [x] Filtrando meetups por data
 - [ ] Configurando MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] Listando notificações do usuário

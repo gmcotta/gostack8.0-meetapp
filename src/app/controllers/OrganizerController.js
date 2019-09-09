@@ -2,7 +2,7 @@ import Meetup from '../models/Meetup';
 import File from '../models/File';
 
 class OrganizerController {
-  // List all meetups creater by the organizer
+  // List all meetups created by the organizer
   async index(req, res) {
     const meetups = await Meetup.findAll({
       where: {
