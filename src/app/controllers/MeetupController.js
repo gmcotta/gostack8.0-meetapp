@@ -175,17 +175,40 @@ class MeetupController {
     }
 
     // Update the meetup
-    const { title, description, location, banner_id } = await meetup.update(
-      req.body
-    );
+    await meetup.update(req.body);
 
     return res.json({
-      title,
-      description,
-      location,
-      date,
-      banner_id,
+      id: meetup.id,
+      title: meetup.title,
+      description: meetup.description,
+      location: meetup.location,
+      date: meetup.date,
+      banner_id: meetup.banner_id,
+      user_id: meetup.user_id,
     });
+  }
+
+  // Delete a meetup
+  async delete(req, res) {
+    // Find the meetup by the id informed on the url
+    const meetup = await Meetup.findByPk(req.params.meetupId);
+
+    // Check if the organizer is accessing the meetup
+    if (req.userId !== meetup.user_id) {
+      return res
+        .status(401)
+        .json({ error: 'You are not the organizer of this meetup' });
+    }
+
+    // Check if it is a past date
+    if (isBefore(meetup.date, new Date())) {
+      return res.status(400).json({ error: 'You cannot cancel a past meetup' });
+    }
+
+    // Delete the meetup
+    await Meetup.destroy();
+
+    return res.json({ ok: `Meetup nº ${req.params.meetupId} canceled` });
   }
 }
 

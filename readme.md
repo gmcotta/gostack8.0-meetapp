@@ -63,7 +63,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
       logado.
 - [x] O usuário também deve poder editar todos dados de meetups que ainda não
       aconteceram e que ele é organizador.
-- [ ] O usuário deve poder cancelar meetups organizados por ele e que ainda não
+- [x] O usuário deve poder cancelar meetups organizados por ele e que ainda não
       aconteceram. O cancelamento deve deletar o meetup da base de dados.
 
 #### Inscrição no meetup
@@ -109,6 +109,8 @@ Julho.
 - [x] Validações de cadastro do meetup
 - [x] Aplicando paginação na listagem de meetups
 - [x] Filtrando meetups por data
+- [x] Editando meetups
+- [x] Cancelando meetups
 - [ ] Configurando MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] Listando notificações do usuário

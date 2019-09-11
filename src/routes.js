@@ -41,6 +41,8 @@ routes.get('/meetups', MeetupController.index);
 routes.post('/meetups', MeetupController.store);
 // Update a meetup
 routes.put('/meetups/:meetupId', MeetupController.update);
+// Delete a meetup
+routes.delete('/meetups/:meetupId', MeetupController.delete);
 
 // List meetups that were created by the logged user
 routes.get('/organizer', OrganizerController.index);
