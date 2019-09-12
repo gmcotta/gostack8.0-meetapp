@@ -4,7 +4,7 @@
 - NodeJS
 - NPM
 - Yarn
-- Docker (PostgreSQL)
+- Docker (PostgreSQL, MongoDB)
 - Insomnia
 - Postbird
 
@@ -33,3 +33,4 @@
 - extname: verifica a extensão do arquivo
 - crypto: gera uma string hexadecimal
 - date-fns: tratamento de datas
+- mongoose: ORM para o MongoDB

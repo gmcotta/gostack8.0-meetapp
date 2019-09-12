@@ -112,7 +112,7 @@ Julho.
 - [x] Editando meetups
 - [x] Cancelando meetups
 - [x] Funcionalidade de inscrição nos meetups
-- [ ] Configurando MongoDB
+- [x] Configurando MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] Listando notificações do usuário
 - [ ] Marcar notificações como lidas
