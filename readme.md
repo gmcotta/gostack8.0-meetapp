@@ -68,10 +68,10 @@ chamado Meetapp (um acrônimo à Meetup + App)
 
 #### Inscrição no meetup
 
-- [ ] O usuário deve poder se inscrever em meetups que não organiza.
-- [ ] O usuário não pode se inscrever em meetups que já aconteceram.
-- [ ] O usuário não pode se inscrever no mesmo meetup duas vezes.
-- [ ] O usuário não pode se inscrever em dois meetups que acontecem no mesmo
+- [x] O usuário deve poder se inscrever em meetups que não organiza.
+- [x] O usuário não pode se inscrever em meetups que já aconteceram.
+- [x] O usuário não pode se inscrever no mesmo meetup duas vezes.
+- [x] O usuário não pode se inscrever em dois meetups que acontecem no mesmo
       horário.
 - [ ] Sempre que um usuário se inscrever no meetup, envie um e-mail ao
       organizador contendo os dados relacionados ao usuário inscrito. O template do
@@ -95,8 +95,8 @@ Julho.
 
 #### Listagem de inscrições
 
-- [ ] Crie uma rota para listar os meetups em que o usuário logado está inscrito.
-- [ ] Liste apenas meetups que ainda não passaram e ordene meetups mais próximos
+- [x] Crie uma rota para listar os meetups em que o usuário logado está inscrito.
+- [x] Liste apenas meetups que ainda não passaram e ordene meetups mais próximos
       como primeiros da lista.
 
 ### Passos
@@ -111,6 +111,7 @@ Julho.
 - [x] Filtrando meetups por data
 - [x] Editando meetups
 - [x] Cancelando meetups
+- [x] Funcionalidade de inscrição nos meetups
 - [ ] Configurando MongoDB
 - [ ] Notificando novos agendamentos
 - [ ] Listando notificações do usuário

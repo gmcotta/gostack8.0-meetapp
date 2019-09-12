@@ -10,6 +10,7 @@ import MeetupController from './app/controllers/MeetupController';
 import OrganizerController from './app/controllers/OrganizerController';
 
 import authMiddleware from './app/middlewares/auth';
+import SubscriberController from './app/controllers/SubscriberController';
 
 // Instanciate the Router module
 const routes = new Router();
@@ -46,6 +47,11 @@ routes.delete('/meetups/:meetupId', MeetupController.delete);
 
 // List meetups that were created by the logged user
 routes.get('/organizer', OrganizerController.index);
+
+// List meetups that were subscribed by the logged user
+routes.get('/subscription', SubscriberController.index);
+// Create a subscription of the meetup
+routes.post('/subscription/:meetupId', SubscriberController.store);
 
 // Export the route
 export default routes;

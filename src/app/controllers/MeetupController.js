@@ -208,7 +208,7 @@ class MeetupController {
     // Delete the meetup
     await Meetup.destroy();
 
-    return res.json({ ok: `Meetup nº ${req.params.meetupId} canceled` });
+    return res.json({ ok: `Meetup #${req.params.meetupId} canceled` });
   }
 }
 
