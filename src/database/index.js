@@ -13,6 +13,7 @@ const models = [User, File, Meetup, Subscriber];
 class Database {
   constructor() {
     this.init();
+    this.mongo();
   }
 
   // This method will connect to the database and load the models
@@ -37,6 +38,7 @@ class Database {
       {
         useNewUrlParser: true,
         useFindAndModify: true,
+        useUnifiedTopology: true,
       }
     );
   }

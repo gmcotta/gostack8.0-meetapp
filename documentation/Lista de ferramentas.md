@@ -7,6 +7,7 @@
 - Docker (PostgreSQL, MongoDB)
 - Insomnia
 - Postbird
+- MongoDB Compass
 
 # Extensões do VSCode usadas
 

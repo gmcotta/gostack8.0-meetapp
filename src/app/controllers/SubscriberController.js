@@ -4,6 +4,9 @@ import { Op } from 'sequelize';
 import Meetup from '../models/Meetup';
 import Subscriber from '../models/Subscriber';
 
+import Notification from '../schemas/Notifications';
+import User from '../models/User';
+
 class SubscriberController {
   async index(req, res) {
     // Find all meetups subscribed by the logged user
@@ -90,6 +93,25 @@ class SubscriberController {
       user_id: req.userId,
       meetup_id: meetup.id,
     });
+
+    // Notify organizer about the subscription
+    const user = await User.findByPk(req.userId);
+
+    // Format subscription date to day month year, hour:minute
+    /*
+    const formattedDate = format(
+      parseISO(subscription.created_at),
+      "DD MMMM YYYY', 'HH':'mm"
+    );
+    */
+
+    // Store notification on schema
+    await Notification.create({
+      content: `New subscription for the meetup: ${meetup.title}.
+      Subscriber: ${user.name} (${user.email})`,
+      user: meetup.user_id,
+    });
+
     return res.json(subscription);
   }
 }
