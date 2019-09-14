@@ -115,8 +115,7 @@ Julho.
 - [x] Configurando MongoDB
 - [x] Notificando novos agendamentos
 - [x] Listando notificações do usuário
-- [ ] Marcar notificações como lidas
-- [ ] Cancelamento de agendamento
+- [x] Marcar notificações como lidas
 - [ ] Configurando Nodemailer
 - [ ] Configurando templates de e-mail
 - [ ] Configurando fila com Redis

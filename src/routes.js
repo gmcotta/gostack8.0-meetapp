@@ -50,6 +50,8 @@ routes.delete('/meetups/:meetupId', MeetupController.delete);
 routes.get('/organizer', OrganizerController.index);
 // List subscription notifications from the meetups of the logged user
 routes.get('/notifications', NotificationController.index);
+// Set notification as read
+routes.put('/notifications/:id', NotificationController.update);
 
 // List meetups that were subscribed by the logged user
 routes.get('/subscription', SubscriberController.index);
