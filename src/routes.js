@@ -8,9 +8,10 @@ import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import MeetupController from './app/controllers/MeetupController';
 import OrganizerController from './app/controllers/OrganizerController';
+import SubscriberController from './app/controllers/SubscriberController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddleware from './app/middlewares/auth';
-import SubscriberController from './app/controllers/SubscriberController';
 
 // Instanciate the Router module
 const routes = new Router();
@@ -47,6 +48,8 @@ routes.delete('/meetups/:meetupId', MeetupController.delete);
 
 // List meetups that were created by the logged user
 routes.get('/organizer', OrganizerController.index);
+// List subscription notifications from the meetups of the logged user
+routes.get('/notifications', NotificationController.index);
 
 // List meetups that were subscribed by the logged user
 routes.get('/subscription', SubscriberController.index);

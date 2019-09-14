@@ -114,7 +114,7 @@ Julho.
 - [x] Funcionalidade de inscrição nos meetups
 - [x] Configurando MongoDB
 - [x] Notificando novos agendamentos
-- [ ] Listando notificações do usuário
+- [x] Listando notificações do usuário
 - [ ] Marcar notificações como lidas
 - [ ] Cancelamento de agendamento
 - [ ] Configurando Nodemailer
