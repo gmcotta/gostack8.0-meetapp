@@ -116,7 +116,7 @@ Julho.
 - [x] Notificando novos agendamentos
 - [x] Listando notificações do usuário
 - [x] Marcar notificações como lidas
-- [ ] Configurando Nodemailer
+- [x] Configurando Nodemailer
 - [ ] Configurando templates de e-mail
 - [ ] Configurando fila com Redis
 - [ ] Monitorando falhas na fila

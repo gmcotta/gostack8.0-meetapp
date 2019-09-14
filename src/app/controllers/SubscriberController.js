@@ -7,6 +7,8 @@ import Subscriber from '../models/Subscriber';
 import Notification from '../schemas/Notifications';
 import User from '../models/User';
 
+import Mail from '../../lib/Mail';
+
 class SubscriberController {
   async index(req, res) {
     // Find all meetups subscribed by the logged user
@@ -40,7 +42,16 @@ class SubscriberController {
   }
 
   async store(req, res) {
-    const meetup = await Meetup.findByPk(req.params.meetupId);
+    const meetup = await Meetup.findOne({
+      where: { id: req.params.meetupId },
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name', 'email'],
+        },
+      ],
+    });
 
     // Check if the logged user is not the organizer of the meetup
     if (req.userId === meetup.user_id) {
@@ -107,9 +118,15 @@ class SubscriberController {
 
     // Store notification on schema
     await Notification.create({
-      content: `New subscription for the meetup: ${meetup.title}.
-      Subscriber: ${user.name} (${user.email})`,
+      content: `New subscription for the meetup: ${meetup.title}. Subscriber: ${user.name} (${user.email})`,
       user: meetup.user_id,
+    });
+
+    // Send mail to the organizer about the subscription
+    await Mail.sendMail({
+      to: `${meetup.user.name} <${meetup.user.email}>`,
+      subject: `New subscription to ${meetup.title}`,
+      text: `New subscription for the meetup: ${meetup.title}. Subscriber: ${user.name} (${user.email})`,
     });
 
     return res.json(subscription);

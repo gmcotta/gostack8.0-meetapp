@@ -8,6 +8,7 @@
 - Insomnia
 - Postbird
 - MongoDB Compass
+- Mailtrap
 
 # Extensões do VSCode usadas
 
@@ -35,3 +36,4 @@
 - crypto: gera uma string hexadecimal
 - date-fns: tratamento de datas
 - mongoose: ORM para o MongoDB
+- nodemailer: gerenciador de envio de emails
