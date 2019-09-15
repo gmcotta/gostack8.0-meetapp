@@ -37,8 +37,13 @@ class Queue {
       // Access the current queue and the task from the set of queues
       const { bee, handle } = this.queues[job.key];
       // Process the queue
-      bee.process(handle);
+      bee.on('failed', this.handleFailure).process(handle);
     });
+  }
+
+  // Handle a possible error when processing the queue
+  handleFailure(job, err) {
+    console.log(`Queue ${job.queue.name}: FAILED`, err);
   }
 }
 

@@ -119,7 +119,7 @@ Julho.
 - [x] Configurando Nodemailer
 - [x] Configurando templates de e-mail
 - [x] Configurando fila com Redis
-- [ ] Monitorando falhas na fila
+- [x] Monitorando falhas na fila
 - [ ] Listando horários disponíveis
 - [ ] Campos virtuais no agendamento
 - [ ] Tratamento de exceções
