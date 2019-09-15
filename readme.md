@@ -120,7 +120,5 @@ Julho.
 - [x] Configurando templates de e-mail
 - [x] Configurando fila com Redis
 - [x] Monitorando falhas na fila
-- [ ] Listando horários disponíveis
-- [ ] Campos virtuais no agendamento
-- [ ] Tratamento de exceções
+- [x] Tratamento de exceções
 - [ ] Variáveis ambiente

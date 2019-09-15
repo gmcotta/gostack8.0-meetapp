@@ -9,6 +9,7 @@
 - Postbird
 - MongoDB Compass
 - Mailtrap
+- Sentry
 
 # Extensões do VSCode usadas
 
@@ -40,3 +41,6 @@
 - express-handlebars: permite o uso do Handlebars no Express
 - nodemailer-express-handlebars: permite o uso do Handlebars com o Nodemailer
 - bee-queue: gerenciador de filas
+- @sentry/node@5.6.2: gerenciador de erros (Sentry)
+- express-async-errors: mostra os erros de métodos assíncronos
+- youch: retorna os erros ocorridos de uma forma mais apresentável
