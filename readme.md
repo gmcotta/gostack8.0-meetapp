@@ -73,7 +73,7 @@ chamado Meetapp (um acrônimo à Meetup + App)
 - [x] O usuário não pode se inscrever no mesmo meetup duas vezes.
 - [x] O usuário não pode se inscrever em dois meetups que acontecem no mesmo
       horário.
-- [ ] Sempre que um usuário se inscrever no meetup, envie um e-mail ao
+- [x] Sempre que um usuário se inscrever no meetup, envie um e-mail ao
       organizador contendo os dados relacionados ao usuário inscrito. O template do
       e-mail fica por sua conta :)
 
@@ -117,7 +117,7 @@ Julho.
 - [x] Listando notificações do usuário
 - [x] Marcar notificações como lidas
 - [x] Configurando Nodemailer
-- [ ] Configurando templates de e-mail
+- [x] Configurando templates de e-mail
 - [ ] Configurando fila com Redis
 - [ ] Monitorando falhas na fila
 - [ ] Listando horários disponíveis

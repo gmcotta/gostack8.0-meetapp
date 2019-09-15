@@ -37,3 +37,5 @@
 - date-fns: tratamento de datas
 - mongoose: ORM para o MongoDB
 - nodemailer: gerenciador de envio de emails
+- express-handlebars: permite o uso do Handlebars no Express
+- nodemailer-express-handlebars: permite o uso do Handlebars com o Nodemailer
