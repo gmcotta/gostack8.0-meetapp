@@ -4,7 +4,7 @@
 - NodeJS
 - NPM
 - Yarn
-- Docker (PostgreSQL, MongoDB)
+- Docker (PostgreSQL, MongoDB, Redis)
 - Insomnia
 - Postbird
 - MongoDB Compass
@@ -39,3 +39,4 @@
 - nodemailer: gerenciador de envio de emails
 - express-handlebars: permite o uso do Handlebars no Express
 - nodemailer-express-handlebars: permite o uso do Handlebars com o Nodemailer
+- bee-queue: gerenciador de filas

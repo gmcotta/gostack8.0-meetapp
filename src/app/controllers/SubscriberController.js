@@ -3,11 +3,11 @@ import { Op } from 'sequelize';
 
 import Meetup from '../models/Meetup';
 import Subscriber from '../models/Subscriber';
-
 import Notification from '../schemas/Notifications';
 import User from '../models/User';
 
-import Mail from '../../lib/Mail';
+import Queue from '../../lib/Queue';
+import SubscriptionMail from '../jobs/SubscriptionMail';
 
 class SubscriberController {
   async index(req, res) {
@@ -123,17 +123,7 @@ class SubscriberController {
     });
 
     // Send mail to the organizer about the subscription
-    await Mail.sendMail({
-      to: `${meetup.user.name} <${meetup.user.email}>`,
-      subject: `New subscription to ${meetup.title}`,
-      template: 'subscription',
-      context: {
-        organizer: meetup.user.name,
-        meetup: meetup.title,
-        subscriber: user.name,
-        email: user.email,
-      },
-    });
+    await Queue.add(SubscriptionMail.key, { meetup, user });
 
     return res.json(subscription);
   }

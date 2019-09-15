@@ -118,7 +118,7 @@ Julho.
 - [x] Marcar notificações como lidas
 - [x] Configurando Nodemailer
 - [x] Configurando templates de e-mail
-- [ ] Configurando fila com Redis
+- [x] Configurando fila com Redis
 - [ ] Monitorando falhas na fila
 - [ ] Listando horários disponíveis
 - [ ] Campos virtuais no agendamento
