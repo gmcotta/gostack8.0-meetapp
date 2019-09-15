@@ -1,7 +1,7 @@
-# Projeto Meetapp - GoStack Bootcamp da Rocketseat
+# Projeto MeetApp - GoStack Bootcamp da Rocketseat
 
 A aplicação desse Bootcamp é um app agragador de eventos para desenvolvedores
-chamado Meetapp (um acrônimo à Meetup + App)
+chamado MeetApp (um acrônimo à Meetup + App)
 
 ## Desafio 2 do Bootcamp
 
@@ -121,4 +121,4 @@ Julho.
 - [x] Configurando fila com Redis
 - [x] Monitorando falhas na fila
 - [x] Tratamento de exceções
-- [ ] Variáveis ambiente
+- [x] Variáveis ambiente

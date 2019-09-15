@@ -44,3 +44,4 @@
 - @sentry/node@5.6.2: gerenciador de erros (Sentry)
 - express-async-errors: mostra os erros de métodos assíncronos
 - youch: retorna os erros ocorridos de uma forma mais apresentável
+- dotenv: armazena as variáveis ambiente em uma variável global do Node
